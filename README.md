@@ -19,20 +19,20 @@ mocks him the whole way.
 
 ## ✨ Features
 
-- **Signature parachute mechanic** — the canopy pops open the instant the dino's feet leave the ground, billows as it fills with air at the top of the jump, then pinches shut as it nears the ground (with a gentle pendulum sway).
-- **3 lives + heart pickups** — a hit costs a heart (with brief mercy invincibility) instead of an instant game over; once you're down a life, a glowing heart sometimes floats in that you can grab to earn one back (capped at 3).
-- **Opening thunderstorm** — every run starts with heavy, wind-blown rain and lightning flashes + thunderclaps that ease off after a few seconds.
-- **Sarcastic quips** — taunts scroll along under the ground and keep needling you as you run.
-- **Air double-jump** — a live-filling power vessel charges over ~20s; when full, jump again in mid-air. Spends the meter, then recharges.
-- **Meteor event** — a telegraphed "☄️ INCOMING!" warning, a flaming meteor crashes down, and leaves a smoking boulder to hurdle.
-- **Shareable ending** — game over gives you a sarcastic rank + epitaph and an auto-generated score card you can copy, share, or download. 100% client-side — no server, no tracking.
+- **Signature parachute mechanic**: The canopy pops open the instant the dino's feet leave the ground, billows as it fills with air at the top of the jump, then pinches shut as it nears the ground (with a gentle pendulum sway).
+- **3 lives + heart pickups**: A hit costs a heart (with brief mercy invincibility) instead of an instant game over; once you're down a life, a glowing heart sometimes floats in that you can grab to earn one back (capped at 3).
+- **Opening thunderstorm**: Every run starts with heavy, wind-blown rain and lightning flashes + thunderclaps that ease off after a few seconds.
+- **Sarcastic quips**: Taunts scroll along under the ground and keep needling you as you run.
+- **Air double-jump**: A live-filling power vessel charges over ~20s; when full, jump again in mid-air. Spends the meter, then recharges.
+- **Meteor event**: A telegraphed "☄️ INCOMING!" warning, a flaming meteor crashes down, and leaves a smoking boulder to hurdle.
+- **Shareable ending**: Game over gives you a sarcastic rank + epitaph and an auto-generated score card you can copy, share, or download. 100% client-side.
 - **Rich, procedural graphics** (zero image files):
   - Day → dusk → night → dawn sky cycle with a sun/moon that arcs overhead and twinkling stars.
   - Parallax clouds and rolling hills.
   - A hand-drawn T-Rex that runs, jumps, ducks, blinks, and kicks up dust.
   - Cactus clusters and flapping pterodactyls.
   - Screen shake, particle puffs, and gentle sound effects.
-- **Endless & responsive** — scales to phones and desktops; keyboard, mouse, and touch.
+- **Endless & responsive**: Scales to phones and desktops; keyboard, mouse, and touch.
 - **High score** saved locally.
 
 ## 🎮 Controls
