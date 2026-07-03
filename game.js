@@ -390,14 +390,26 @@
     if (e.code === "ArrowDown" || e.code === "KeyS") setDuck(false);
   });
 
+  // Touch / mouse: a tap ANYWHERE jumps; dragging downward (swipe) ducks.
+  let touchActive = false, touchStartY = 0, touchDucking = false;
   canvas.addEventListener("pointerdown", (e) => {
     e.preventDefault();
     sound.ensure();
-    // Bottom third of screen = duck, otherwise jump
-    if (state === STATE.RUNNING && e.clientY > wrap.clientHeight * 0.66) setDuck(true);
-    else primaryAction();
+    if (state !== STATE.RUNNING) { primaryAction(); return; }   // start / restart
+    touchActive = true; touchDucking = false; touchStartY = e.clientY;
   });
-  window.addEventListener("pointerup", () => setDuck(false));
+  window.addEventListener("pointermove", (e) => {
+    if (!touchActive) return;
+    if (e.clientY - touchStartY > 26 && !touchDucking) { setDuck(true); touchDucking = true; }
+  });
+  function endTouch() {
+    if (!touchActive) return;
+    touchActive = false;
+    if (touchDucking) { setDuck(false); touchDucking = false; }
+    else jump();                              // released without swiping down → jump
+  }
+  window.addEventListener("pointerup", endTouch);
+  window.addEventListener("pointercancel", endTouch);
 
   // ----- UI wiring ----------------------------------------------------------
   const overlay = document.getElementById("overlay");

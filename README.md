@@ -1,80 +1,72 @@
 # 🦕 Poor Dino — Cope & Run
 
-A richer, funnier take on the classic Chrome dino runner: a dinosaur too stubborn to
+A dinosaur too stubborn to
 stay extinct, jogging through a thunderstorm under a colorful parachute while the game
 mocks him the whole way.
 
-![made with vanilla JS + Canvas](https://img.shields.io/badge/stack-vanilla%20JS%20%2B%20Canvas-4ecdc4)
+**Play it live:** https://poor-dino-cope-and-run.netlify.app/
+
+## 📸 Screenshots
+
+<p align="center">
+  <img src="screenshots/img2.png" width="800" alt="Gameplay: the T-Rex gliding under its parachute at night while the game taunts it">
+</p>
+
+<p align="center">
+  <img src="screenshots/image.png" width="46%" alt="Start screen">
+  <img src="screenshots/img3.png" width="46%" alt="Game over with a shareable score card">
+</p>
 
 ## ✨ Features
 
-- **Signature parachute mechanic** — the canopy pops open the instant the dino's feet leave the ground, visibly billows as it fills with air at the top of the jump, then pinches and squeezes shut as it nears the ground.
+- **Signature parachute mechanic** — the canopy pops open the instant the dino's feet leave the ground, billows as it fills with air at the top of the jump, then pinches shut as it nears the ground (with a gentle pendulum sway).
 - **3 lives + heart pickups** — a hit costs a heart (with brief mercy invincibility) instead of an instant game over; once you're down a life, a glowing heart sometimes floats in that you can grab to earn one back (capped at 3).
 - **Opening thunderstorm** — every run starts with heavy, wind-blown rain and lightning flashes + thunderclaps that ease off after a few seconds.
-- **Sarcastic quips** — floating taunts start needling you around 15s and keep coming.
-- **Air double-jump** — a live-filling power vessel (right side of the sky) charges over ~20s; when full, jump again in mid-air. Spends the meter, then recharges.
+- **Sarcastic quips** — taunts scroll along under the ground and keep needling you as you run.
+- **Air double-jump** — a live-filling power vessel charges over ~20s; when full, jump again in mid-air. Spends the meter, then recharges.
 - **Meteor event** — a telegraphed "☄️ INCOMING!" warning, a flaming meteor crashes down, and leaves a smoking boulder to hurdle.
-- **Shareable ending** — game over gives you a sarcastic rank + epitaph and an auto-generated score card you can copy, share (Web Share API), or download. 100% client-side — no server, no tracking.
-- **Rich, hand-drawn graphics** (all procedural — zero image files):
-  - Day → dusk → night → dawn sky cycle with a sun/moon that arcs across the sky and twinkling stars.
+- **Shareable ending** — game over gives you a sarcastic rank + epitaph and an auto-generated score card you can copy, share, or download. 100% client-side — no server, no tracking.
+- **Rich, procedural graphics** (zero image files):
+  - Day → dusk → night → dawn sky cycle with a sun/moon that arcs overhead and twinkling stars.
   - Parallax clouds and rolling hills.
-  - A cheery cartoon dino that runs, jumps, ducks, blinks, and kicks up dust.
+  - A hand-drawn T-Rex that runs, jumps, ducks, blinks, and kicks up dust.
   - Cactus clusters and flapping pterodactyls.
   - Screen shake, particle puffs, and gentle sound effects.
-- **Endless & responsive** — scales to any screen, works with keyboard, mouse, and touch.
+- **Endless & responsive** — scales to phones and desktops; keyboard, mouse, and touch.
 - **High score** saved locally.
 
 ## 🎮 Controls
 
 | Action | Keys | Touch |
 | ------ | ---- | ----- |
-| Jump   | `Space` / `↑` / `W` | Tap top ⅔ of screen |
-| Duck   | `↓` / `S` | Hold bottom ⅓ of screen |
+| Jump   | `Space` / `↑` / `W` | Tap anywhere |
+| Duck   | `↓` / `S` | Swipe down |
 | Start / Restart | `Space` | Tap |
 | Mute   | 🔊 button (top-left) | Tap button |
 
-> The parachute is automatic — just jump and watch it deploy on the way down.
-
 ## ▶️ Run locally
 
-It's a static site, so anything that serves files works. For example:
+It's a static site — any file server works:
 
 ```bash
-# Python
-python -m http.server 8000
-# or Node
-npx serve .
+npx serve .        # or: python -m http.server 8000
 ```
 
-Then open <http://localhost:8000>. (Opening `index.html` directly in a browser also works.)
+Then open the printed URL. (Opening `index.html` directly in a browser works too.)
 
-## 🚀 Deploy online
+## 🚀 Deploy
 
-### Vercel
-1. Push this folder to a GitHub repo (or run `npx vercel`).
-2. Import the repo at [vercel.com/new](https://vercel.com/new).
-3. Framework preset: **Other** · Build command: *(empty)* · Output dir: `.`
-4. Deploy — you get a public `https://your-project.vercel.app` link.
+No build step — any static host works. `index.html` just needs to be at the site root.
 
-Or from this folder, without a repo:
-```bash
-npx vercel --prod
-```
-
-### Netlify
-- **Drag & drop:** zip or drag this folder onto <https://app.netlify.com/drop>.
-- **CLI:** `npx netlify deploy --prod --dir .`
-- **Git:** connect the repo; `netlify.toml` already sets publish dir to `.` with no build.
+- **Netlify:** drag the folder onto <https://app.netlify.com/drop>, or connect the repo with build command empty and publish directory `.`
 
 ## 📁 Project structure
 
 ```
 poor-dino/
-├── index.html    # markup, HUD, overlays
-├── style.css     # UI / overlay styling
-├── game.js       # game engine + all procedural graphics
-├── vercel.json   # static hosting config (Vercel)
-├── netlify.toml  # static hosting config (Netlify)
+├── index.html   # markup, HUD, overlays
+├── style.css    # UI / overlay styling
+├── game.js      # game engine + all procedural graphics
 └── README.md
 ```
 
