@@ -4,7 +4,7 @@ A dinosaur too stubborn to
 stay extinct, jogging through a thunderstorm under a colorful parachute while the game
 mocks him the whole way.
 
-**Play it live:** https://poor-dino-cope-and-run.netlify.app/
+**Play it live:** https://poor-dino.itch.io/poor-dino
 
 ## 📸 Screenshots
 
@@ -26,6 +26,7 @@ mocks him the whole way.
 - **Air double-jump**: A live-filling power vessel charges over ~20s; when full, jump again in mid-air. Spends the meter, then recharges.
 - **Meteor event**: A telegraphed "☄️ INCOMING!" warning, a flaming meteor crashes down, and leaves a smoking boulder to hurdle.
 - **Shareable ending**: Game over gives you a sarcastic rank + epitaph and an auto-generated score card you can copy, share, or download. 100% client-side.
+- **Face mode 🤳**: Upload a side-profile photo and the dino wears *your* face — tilted to match its head pose and shown on the share card too. Fully client-side: the photo is cropped and downscaled in the browser and stored only in localStorage; it never leaves your device.
 - **Rich, procedural graphics** (zero image files):
   - Day → dusk → night → dawn sky cycle with a sun/moon that arcs overhead and twinkling stars.
   - Parallax clouds and rolling hills.
